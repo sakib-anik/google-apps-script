@@ -1,0 +1,23 @@
+function syncSheets() {
+  // 🔹 Source ও Destination Sheet ID বসাও
+  var sourceSheetId = '1ud6hgl-VvbbO1fcQti11PENWVfX65-CJ449RL6ItRrI';       // তোমার Source Sheet এর ID
+  var destinationSheetId = '1nUQ3-IciWWfaacAE6E0PzYrw2eJCKW9WoyTgm751gFg'; // তোমার Destination Sheet এর ID
+  
+  // 🔹 Sheet নাম বসাও (যেটা নিচে ট্যাবে দেখা যায়)
+  var sourceSheetName = 'Sheet1';
+  var destinationSheetName = 'Sheet1';
+  
+  // 🔹 Source Sheet থেকে ডেটা আনো
+  var source = SpreadsheetApp.openById(sourceSheetId).getSheetByName(sourceSheetName);
+  var destination = SpreadsheetApp.openById(destinationSheetId).getSheetByName(destinationSheetName);
+  
+  // 🔹 ডেটা কপি করো
+  var data = source.getDataRange().getValues();
+  
+  // 🔹 পুরনো ডেটা মুছে নতুন ডেটা বসাও
+  destination.clearContents();
+  destination.getRange(1, 1, data.length, data[0].length).setValues(data);
+  
+  // 🔹 সফলতার লগ
+  Logger.log("✅ Data synced successfully!");
+}
