@@ -1,0 +1,65 @@
+function twoWaySync() {
+  // 🧾 দুটি শিটের ID বসাও
+  var sheetAId = '1dkxyRi5X8V5ynvQ9U9vMqbG6MsHAHQNjDbCu5jutKyY';  // উদাহরণ: Source 1
+  var sheetBId = '13fLUzrq4xKpJoRk0IlMtdbo-ulqgBIyFXegR7wPmNX8';  // উদাহরণ: Source 2
+
+  // 🧾 শিটের নাম (ট্যাবের নাম)
+  var sheetAName = 'Sheet1';
+  var sheetBName = 'Sheet1';
+
+  // 📂 শিটগুলো ওপেন করো
+  var sheetA = SpreadsheetApp.openById(sheetAId).getSheetByName(sheetAName);
+  var sheetB = SpreadsheetApp.openById(sheetBId).getSheetByName(sheetBName);
+
+  // 📊 ডেটা আনো
+  var dataA = sheetA.getDataRange().getValues();
+  var dataB = sheetB.getDataRange().getValues();
+
+  // 🧮 সর্বোচ্চ রো ও কলাম বের করো
+  var maxRows = Math.max(dataA.length, dataB.length);
+  var maxCols = Math.max(dataA[0].length, dataB[0].length);
+
+  // 🧠 দুই দিকের তুলনা করে সিঙ্ক করা
+  var updatedA = false;
+  var updatedB = false;
+
+  for (var i = 0; i < maxRows; i++) {
+    for (var j = 0; j < maxCols; j++) {
+      var valA = (dataA[i] && dataA[i][j]) || '';
+      var valB = (dataB[i] && dataB[i][j]) || '';
+
+      // যদি মান ভিন্ন হয়, তাহলে আপডেট
+      if (valA !== valB) {
+        if (valA === '' && valB !== '') {
+          // Sheet A ফাঁকা, Sheet B তে মান আছে → A আপডেট করো
+          if (!dataA[i]) dataA[i] = [];
+          dataA[i][j] = valB;
+          updatedA = true;
+        } else if (valB === '' && valA !== '') {
+          // Sheet B ফাঁকা, Sheet A তে মান আছে → B আপডেট করো
+          if (!dataB[i]) dataB[i] = [];
+          dataB[i][j] = valA;
+          updatedB = true;
+        } else {
+          // দুটোতেই মান আছে কিন্তু আলাদা → Sheet B এর মানকে Sheet A এর সাথে মিলাও
+          dataB[i][j] = valA;
+          updatedB = true;
+        }
+      }
+    }
+  }
+
+  // ✅ আপডেটগুলো লিখে দাও
+  if (updatedA) {
+    sheetA.clearContents();
+    sheetA.getRange(1, 1, dataA.length, dataA[0].length).setValues(dataA);
+  }
+
+  if (updatedB) {
+    sheetB.clearContents();
+    sheetB.getRange(1, 1, dataB.length, dataB[0].length).setValues(dataB);
+  }
+
+  Logger.log("✅ Two-way sync completed successfully!");
+}
+
