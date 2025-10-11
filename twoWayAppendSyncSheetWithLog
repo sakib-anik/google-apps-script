@@ -1,0 +1,71 @@
+function twoWayAppendSyncWithLog() {
+  // 🧾 দুইটা শিটের ID বসাও
+  var sheetAId = 'SHEET_A_ID';  // প্রথম শিট
+  var sheetBId = 'SHEET_B_ID';  // দ্বিতীয় শিট
+
+  // 🧾 শিটের নাম (ট্যাবের নাম)
+  var sheetAName = 'Sheet1';
+  var sheetBName = 'Sheet1';
+
+  // 🧭 Sheet অবজেক্ট
+  var sheetA = SpreadsheetApp.openById(sheetAId).getSheetByName(sheetAName);
+  var sheetB = SpreadsheetApp.openById(sheetBId).getSheetByName(sheetBName);
+
+  // 📊 ডেটা আনো
+  var dataA = sheetA.getDataRange().getValues();
+  var dataB = sheetB.getDataRange().getValues();
+
+  // 🔹 Header বাদ দিয়ে শুধু ডেটা অংশ রাখো (ধরা হচ্ছে Row 1 হেডার)
+  var bodyA = dataA.slice(1);
+  var bodyB = dataB.slice(1);
+
+  // 🔹 Header এ অতিরিক্ত কলাম যোগ (যদি না থাকে)
+  var headersA = dataA[0];
+  var headersB = dataB[0];
+  if (!headersA.includes("Synced From")) {
+    sheetA.appendRow(["", "", "", "", "Synced From", "Synced Time"]);
+    headersA.push("Synced From", "Synced Time");
+  }
+  if (!headersB.includes("Synced From")) {
+    sheetB.appendRow(["", "", "", "", "Synced From", "Synced Time"]);
+    headersB.push("Synced From", "Synced Time");
+  }
+
+  // 🔹 ডেটাকে স্ট্রিং বানাও সহজ তুলনার জন্য
+  var setA = bodyA.map(r => JSON.stringify(r.slice(0, -2))); // শেষ 2টা কলাম বাদ
+  var setB = bodyB.map(r => JSON.stringify(r.slice(0, -2)));
+
+  var newRowsForB = [];
+  var newRowsForA = [];
+
+  // 🧮 Sheet A → Sheet B
+  for (var i = 0; i < bodyA.length; i++) {
+    if (setB.indexOf(setA[i]) === -1) { // যদি Sheet B তে না থাকে
+      var newRow = bodyA[i].slice();
+      newRow.push("A → B", new Date());
+      newRowsForB.push(newRow);
+    }
+  }
+
+  // 🧮 Sheet B → Sheet A
+  for (var j = 0; j < bodyB.length; j++) {
+    if (setA.indexOf(setB[j]) === -1) { // যদি Sheet A তে না থাকে
+      var newRow = bodyB[j].slice();
+      newRow.push("B → A", new Date());
+      newRowsForA.push(newRow);
+    }
+  }
+
+  // 📥 নতুন রো অ্যাপেন্ড করো (যদি কিছু থাকে)
+  if (newRowsForB.length > 0) {
+    sheetB.getRange(sheetB.getLastRow() + 1, 1, newRowsForB.length, newRowsForB[0].length)
+      .setValues(newRowsForB);
+  }
+
+  if (newRowsForA.length > 0) {
+    sheetA.getRange(sheetA.getLastRow() + 1, 1, newRowsForA.length, newRowsForA[0].length)
+      .setValues(newRowsForA);
+  }
+
+  Logger.log("✅ Two-way append sync completed with timestamps!");
+}
