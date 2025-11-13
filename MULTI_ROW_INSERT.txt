@@ -1,0 +1,768 @@
+function submitData() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet2"); // Change name if needed
+  const sheetPrint = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1-Master"); // Change name if needed
+  let R003 =  [];
+  let R031 =  [];
+  let R051 =  [];
+  let R071 =  [];
+  let R091 =  [];
+  let R111 =  [];
+  let R131 =  [];
+  let R151 =  [];
+  let R171 =  [];
+  let R191 =  [];
+  let R211 =  [];
+  let R231 =  [];
+  let R251 =  [];
+  let R271 =  [];
+  let R291 =  [];
+  let R311 =  [];
+  let R331 =  [];
+  let R351 =  [];
+  let R371 =  [];
+  let R391 =  [];
+  let R411 =  [];
+  let R431 =  [];
+  let R451 =  [];
+  let R471 =  [];
+  let R491 =  [];
+  let R511 =  [];
+  let R531 =  [];
+  let R551 =  [];
+  let R571 =  [];
+  let R591 =  [];
+  let R611 =  [];
+  let R631 =  [];
+  let R651 =  [];
+  let R671 =  [];
+  let R691 =  [];
+  let R711 =  [];
+  let R731 =  [];
+  let R751 =  [];
+  let R771 =  [];
+  let R791 =  [];
+  let R811 =  [];
+  let R831 =  [];
+  let R851 =  [];
+  let R871 =  [];
+  let R891 =  [];
+  let R911 =  [];
+  let R931 =  [];
+  let R951 =  [];
+  let R971 =  [];
+  let R991 =  [];
+  let R1011 =  [];
+  let R1031 =  [];
+  let R1051 =  [];
+  let R1071 =  [];
+  let R1091 =  [];
+  let R1111 =  [];
+  let R1131 =  [];
+  let R1151 =  [];
+  let R1171 =  [];
+  let R1191 =  [];
+  let R1211 =  [];
+  let R1231 =  [];
+  let R1251 =  [];
+  let R1271 =  [];
+  let R1291 =  [];
+  let R1311 =  [];
+  let R1331 =  [];
+  let R1351 =  [];
+  let R1371 =  [];
+  let R1391 =  [];
+  let R1411 =  [];
+  let R1431 =  [];
+  let R1451 =  [];
+  let R1471 =  [];
+  let R1491 =  [];
+  let R1511 =  [];
+  let R1531 =  [];
+  let R1551 =  [];
+  let R1571 =  [];
+  let R1591 =  [];
+  let R1611 =  [];
+  let R1631 =  [];
+  let R1651 =  [];
+  let R1671 =  [];
+  let R1691 =  [];
+  let R1711 =  [];
+  let R1731 =  [];
+  let R1751 =  [];
+  let R1771 =  [];
+  let R1791 =  [];
+  let R1811 =  [];
+  let R1831 =  [];
+  let R1851 =  [];
+  let R1871 =  [];
+  let R1891 =  [];
+  let R1911 =  [];
+  let R1931 =  [];
+  let R1951 =  [];
+  let R1971 =  [];
+  let R1991 =  [];
+  let R2011 =  [];
+  let R2031 =  [];
+  let R2051 =  [];
+  let R2071 =  [];
+  let R2091 =  [];
+  let R2111 =  [];
+  let R2131 =  [];
+  let R2151 =  [];
+  let R2171 =  [];
+  let R2191 =  [];
+  let R2211 =  [];
+  let R2231 =  [];
+  let R2251 =  [];
+  let R2271 =  [];
+  let R2291 =  [];
+  let R2311 =  [];
+  let R2331 =  [];
+  let R2351 =  [];
+  let R2371 =  [];
+  let R2391 =  [];
+  let R2411 =  [];
+  let R2431 =  [];
+  let R2451 =  [];
+  let R2471 =  [];
+ 
+  R003.push(sheet.getRange("D4").getValue());
+  R003.push(sheet.getRange("E4").getValue());
+  R003.push(sheet.getRange("F4").getValue());
+
+  R031.push(sheet.getRange("D5").getValue());
+  R031.push(sheet.getRange("E5").getValue());
+  R031.push(sheet.getRange("F5").getValue());
+
+  R051.push(sheet.getRange("D6").getValue());
+  R051.push(sheet.getRange("E6").getValue());
+  R051.push(sheet.getRange("F6").getValue());
+
+  R071.push(sheet.getRange("D7").getValue());
+  R071.push(sheet.getRange("E7").getValue());
+  R071.push(sheet.getRange("F7").getValue());
+
+  R091.push(sheet.getRange("D8").getValue());
+  R091.push(sheet.getRange("E8").getValue());
+  R091.push(sheet.getRange("F8").getValue());
+
+  R111.push(sheet.getRange("D9").getValue());
+  R111.push(sheet.getRange("E9").getValue());
+  R111.push(sheet.getRange("F9").getValue());
+
+  R131.push(sheet.getRange("D10").getValue());
+  R131.push(sheet.getRange("E10").getValue());
+  R131.push(sheet.getRange("F10").getValue());
+
+  R151.push(sheet.getRange("D11").getValue());
+  R151.push(sheet.getRange("E11").getValue());
+  R151.push(sheet.getRange("F11").getValue());
+
+  R171.push(sheet.getRange("D12").getValue());
+  R171.push(sheet.getRange("E12").getValue());
+  R171.push(sheet.getRange("F12").getValue());
+
+  R191.push(sheet.getRange("D13").getValue());
+  R191.push(sheet.getRange("E13").getValue());
+  R191.push(sheet.getRange("F13").getValue());
+
+  R211.push(sheet.getRange("D14").getValue());
+  R211.push(sheet.getRange("E14").getValue());
+  R211.push(sheet.getRange("F14").getValue());
+
+  R231.push(sheet.getRange("D15").getValue());
+  R231.push(sheet.getRange("E15").getValue());
+  R231.push(sheet.getRange("F15").getValue());
+
+  R251.push(sheet.getRange("D16").getValue());
+  R251.push(sheet.getRange("E16").getValue());
+  R251.push(sheet.getRange("F16").getValue());
+
+  R271.push(sheet.getRange("D17").getValue());
+  R271.push(sheet.getRange("E17").getValue());
+  R271.push(sheet.getRange("F17").getValue());
+
+  R291.push(sheet.getRange("D18").getValue());
+  R291.push(sheet.getRange("E18").getValue());
+  R291.push(sheet.getRange("F18").getValue());
+
+  R311.push(sheet.getRange("D19").getValue());
+  R311.push(sheet.getRange("E19").getValue());
+  R311.push(sheet.getRange("F19").getValue());
+
+  R331.push(sheet.getRange("D20").getValue());
+  R331.push(sheet.getRange("E20").getValue());
+  R331.push(sheet.getRange("F20").getValue());
+
+  R351.push(sheet.getRange("D21").getValue());
+  R351.push(sheet.getRange("E21").getValue());
+  R351.push(sheet.getRange("F21").getValue());
+
+  R371.push(sheet.getRange("D22").getValue());
+  R371.push(sheet.getRange("E22").getValue());
+  R371.push(sheet.getRange("F22").getValue());
+
+  R391.push(sheet.getRange("D23").getValue());
+  R391.push(sheet.getRange("E23").getValue());
+  R391.push(sheet.getRange("F23").getValue());
+
+  R411.push(sheet.getRange("D24").getValue());
+  R411.push(sheet.getRange("E24").getValue());
+  R411.push(sheet.getRange("F24").getValue());
+
+  R431.push(sheet.getRange("D25").getValue());
+  R431.push(sheet.getRange("E25").getValue());
+  R431.push(sheet.getRange("F25").getValue());
+
+  R451.push(sheet.getRange("D26").getValue());
+  R451.push(sheet.getRange("E26").getValue());
+  R451.push(sheet.getRange("F26").getValue());
+
+  R471.push(sheet.getRange("D27").getValue());
+  R471.push(sheet.getRange("E27").getValue());
+  R471.push(sheet.getRange("F27").getValue());
+
+  R491.push(sheet.getRange("D28").getValue());
+  R491.push(sheet.getRange("E28").getValue());
+  R491.push(sheet.getRange("F28").getValue());
+
+  R511.push(sheet.getRange("D29").getValue());
+  R511.push(sheet.getRange("E29").getValue());
+  R511.push(sheet.getRange("F29").getValue());
+
+  R531.push(sheet.getRange("D30").getValue());
+  R531.push(sheet.getRange("E30").getValue());
+  R531.push(sheet.getRange("F30").getValue());
+
+  R551.push(sheet.getRange("D31").getValue());
+  R551.push(sheet.getRange("E31").getValue());
+  R551.push(sheet.getRange("F31").getValue());
+
+  R571.push(sheet.getRange("D32").getValue());
+  R571.push(sheet.getRange("E32").getValue());
+  R571.push(sheet.getRange("F32").getValue());
+
+  R591.push(sheet.getRange("D33").getValue());
+  R591.push(sheet.getRange("E33").getValue());
+  R591.push(sheet.getRange("F33").getValue());
+
+  R611.push(sheet.getRange("D34").getValue());
+  R611.push(sheet.getRange("E34").getValue());
+  R611.push(sheet.getRange("F34").getValue());
+
+  R631.push(sheet.getRange("D35").getValue());
+  R631.push(sheet.getRange("E35").getValue());
+  R631.push(sheet.getRange("F35").getValue());
+
+  R651.push(sheet.getRange("D36").getValue());
+  R651.push(sheet.getRange("E36").getValue());
+  R651.push(sheet.getRange("F36").getValue());
+
+  R671.push(sheet.getRange("D37").getValue());
+  R671.push(sheet.getRange("E37").getValue());
+  R671.push(sheet.getRange("F37").getValue());
+
+  R691.push(sheet.getRange("D38").getValue());
+  R691.push(sheet.getRange("E38").getValue());
+  R691.push(sheet.getRange("F38").getValue());
+
+  R711.push(sheet.getRange("D39").getValue());
+  R711.push(sheet.getRange("E39").getValue());
+  R711.push(sheet.getRange("F39").getValue());
+
+  R731.push(sheet.getRange("D40").getValue());
+  R731.push(sheet.getRange("E40").getValue());
+  R731.push(sheet.getRange("F40").getValue());
+
+  R751.push(sheet.getRange("D41").getValue());
+  R751.push(sheet.getRange("E41").getValue());
+  R751.push(sheet.getRange("F41").getValue());
+
+  R771.push(sheet.getRange("D42").getValue());
+  R771.push(sheet.getRange("E42").getValue());
+  R771.push(sheet.getRange("F42").getValue());
+
+  R791.push(sheet.getRange("D43").getValue());
+  R791.push(sheet.getRange("E43").getValue());
+  R791.push(sheet.getRange("F43").getValue());
+
+  R811.push(sheet.getRange("D44").getValue());
+  R811.push(sheet.getRange("E44").getValue());
+  R811.push(sheet.getRange("F44").getValue());
+
+  R831.push(sheet.getRange("D45").getValue());
+  R831.push(sheet.getRange("E45").getValue());
+  R831.push(sheet.getRange("F45").getValue());
+
+  R851.push(sheet.getRange("D46").getValue());
+  R851.push(sheet.getRange("E46").getValue());
+  R851.push(sheet.getRange("F46").getValue());
+
+  R871.push(sheet.getRange("D47").getValue());
+  R871.push(sheet.getRange("E47").getValue());
+  R871.push(sheet.getRange("F47").getValue());
+
+  R891.push(sheet.getRange("D48").getValue());
+  R891.push(sheet.getRange("E48").getValue());
+  R891.push(sheet.getRange("F48").getValue());
+
+  R911.push(sheet.getRange("D49").getValue());
+  R911.push(sheet.getRange("E49").getValue());
+  R911.push(sheet.getRange("F49").getValue());
+
+  R931.push(sheet.getRange("D50").getValue());
+  R931.push(sheet.getRange("E50").getValue());
+  R931.push(sheet.getRange("F50").getValue());
+
+  R951.push(sheet.getRange("D51").getValue());
+  R951.push(sheet.getRange("E51").getValue());
+  R951.push(sheet.getRange("F51").getValue());
+
+  R971.push(sheet.getRange("D52").getValue());
+  R971.push(sheet.getRange("E52").getValue());
+  R971.push(sheet.getRange("F52").getValue());
+
+  R991.push(sheet.getRange("D53").getValue());
+  R991.push(sheet.getRange("E53").getValue());
+  R991.push(sheet.getRange("F53").getValue());
+
+  R1011.push(sheet.getRange("D54").getValue());
+  R1011.push(sheet.getRange("E54").getValue());
+  R1011.push(sheet.getRange("F54").getValue());
+
+  R1031.push(sheet.getRange("D55").getValue());
+  R1031.push(sheet.getRange("E55").getValue());
+  R1031.push(sheet.getRange("F55").getValue());
+
+  R1051.push(sheet.getRange("D56").getValue());
+  R1051.push(sheet.getRange("E56").getValue());
+  R1051.push(sheet.getRange("F56").getValue());
+
+  R1071.push(sheet.getRange("D57").getValue());
+  R1071.push(sheet.getRange("E57").getValue());
+  R1071.push(sheet.getRange("F57").getValue());
+
+  R1091.push(sheet.getRange("D58").getValue());
+  R1091.push(sheet.getRange("E58").getValue());
+  R1091.push(sheet.getRange("F58").getValue());
+
+  R1111.push(sheet.getRange("D59").getValue());
+  R1111.push(sheet.getRange("E59").getValue());
+  R1111.push(sheet.getRange("F59").getValue());
+
+  R1131.push(sheet.getRange("D60").getValue());
+  R1131.push(sheet.getRange("E60").getValue());
+  R1131.push(sheet.getRange("F60").getValue());
+
+  R1151.push(sheet.getRange("D61").getValue());
+  R1151.push(sheet.getRange("E61").getValue());
+  R1151.push(sheet.getRange("F61").getValue());
+
+  R1171.push(sheet.getRange("D62").getValue());
+  R1171.push(sheet.getRange("E62").getValue());
+  R1171.push(sheet.getRange("F62").getValue());
+
+  R1191.push(sheet.getRange("D63").getValue());
+  R1191.push(sheet.getRange("E63").getValue());
+  R1191.push(sheet.getRange("F63").getValue());
+
+  R1211.push(sheet.getRange("D64").getValue());
+  R1211.push(sheet.getRange("E64").getValue());
+  R1211.push(sheet.getRange("F64").getValue());
+
+  R1231.push(sheet.getRange("D65").getValue());
+  R1231.push(sheet.getRange("E65").getValue());
+  R1231.push(sheet.getRange("F65").getValue());
+
+  R1251.push(sheet.getRange("D66").getValue());
+  R1251.push(sheet.getRange("E66").getValue());
+  R1251.push(sheet.getRange("F66").getValue());
+
+  R1271.push(sheet.getRange("D67").getValue());
+  R1271.push(sheet.getRange("E67").getValue());
+  R1271.push(sheet.getRange("F67").getValue());
+
+  R1291.push(sheet.getRange("D68").getValue());
+  R1291.push(sheet.getRange("E68").getValue());
+  R1291.push(sheet.getRange("F68").getValue());
+
+  R1311.push(sheet.getRange("D69").getValue());
+  R1311.push(sheet.getRange("E69").getValue());
+  R1311.push(sheet.getRange("F69").getValue());
+
+  R1331.push(sheet.getRange("D70").getValue());
+  R1331.push(sheet.getRange("E70").getValue());
+  R1331.push(sheet.getRange("F70").getValue());
+
+  R1351.push(sheet.getRange("D71").getValue());
+  R1351.push(sheet.getRange("E71").getValue());
+  R1351.push(sheet.getRange("F71").getValue());
+
+  R1371.push(sheet.getRange("D72").getValue());
+  R1371.push(sheet.getRange("E72").getValue());
+  R1371.push(sheet.getRange("F72").getValue());
+
+  R1391.push(sheet.getRange("D73").getValue());
+  R1391.push(sheet.getRange("E73").getValue());
+  R1391.push(sheet.getRange("F73").getValue());
+
+  R1411.push(sheet.getRange("D74").getValue());
+  R1411.push(sheet.getRange("E74").getValue());
+  R1411.push(sheet.getRange("F74").getValue());
+
+  R1431.push(sheet.getRange("D75").getValue());
+  R1431.push(sheet.getRange("E75").getValue());
+  R1431.push(sheet.getRange("F75").getValue());
+
+  R1451.push(sheet.getRange("D76").getValue());
+  R1451.push(sheet.getRange("E76").getValue());
+  R1451.push(sheet.getRange("F76").getValue());
+
+  R1471.push(sheet.getRange("D77").getValue());
+  R1471.push(sheet.getRange("E77").getValue());
+  R1471.push(sheet.getRange("F77").getValue());
+
+  R1491.push(sheet.getRange("D78").getValue());
+  R1491.push(sheet.getRange("E78").getValue());
+  R1491.push(sheet.getRange("F78").getValue());
+
+  R1511.push(sheet.getRange("D79").getValue());
+  R1511.push(sheet.getRange("E79").getValue());
+  R1511.push(sheet.getRange("F79").getValue());
+
+  R1531.push(sheet.getRange("D80").getValue());
+  R1531.push(sheet.getRange("E80").getValue());
+  R1531.push(sheet.getRange("F80").getValue());
+
+  R1551.push(sheet.getRange("D81").getValue());
+  R1551.push(sheet.getRange("E81").getValue());
+  R1551.push(sheet.getRange("F81").getValue());
+
+  R1571.push(sheet.getRange("D82").getValue());
+  R1571.push(sheet.getRange("E82").getValue());
+  R1571.push(sheet.getRange("F82").getValue());
+
+  R1591.push(sheet.getRange("D83").getValue());
+  R1591.push(sheet.getRange("E83").getValue());
+  R1591.push(sheet.getRange("F83").getValue());
+
+  R1611.push(sheet.getRange("D84").getValue());
+  R1611.push(sheet.getRange("E84").getValue());
+  R1611.push(sheet.getRange("F84").getValue());
+
+  R1631.push(sheet.getRange("D85").getValue());
+  R1631.push(sheet.getRange("E85").getValue());
+  R1631.push(sheet.getRange("F85").getValue());
+
+  R1651.push(sheet.getRange("D86").getValue());
+  R1651.push(sheet.getRange("E86").getValue());
+  R1651.push(sheet.getRange("F86").getValue());
+
+  R1671.push(sheet.getRange("D87").getValue());
+  R1671.push(sheet.getRange("E87").getValue());
+  R1671.push(sheet.getRange("F87").getValue());
+
+  R1691.push(sheet.getRange("D88").getValue());
+  R1691.push(sheet.getRange("E88").getValue());
+  R1691.push(sheet.getRange("F88").getValue());
+
+  R1711.push(sheet.getRange("D89").getValue());
+  R1711.push(sheet.getRange("E89").getValue());
+  R1711.push(sheet.getRange("F89").getValue());
+
+  R1731.push(sheet.getRange("D90").getValue());
+  R1731.push(sheet.getRange("E90").getValue());
+  R1731.push(sheet.getRange("F90").getValue());
+
+  R1751.push(sheet.getRange("D91").getValue());
+  R1751.push(sheet.getRange("E91").getValue());
+  R1751.push(sheet.getRange("F91").getValue());
+
+  R1771.push(sheet.getRange("D92").getValue());
+  R1771.push(sheet.getRange("E92").getValue());
+  R1771.push(sheet.getRange("F92").getValue());
+
+  R1791.push(sheet.getRange("D93").getValue());
+  R1791.push(sheet.getRange("E93").getValue());
+  R1791.push(sheet.getRange("F93").getValue());
+
+  R1811.push(sheet.getRange("D94").getValue());
+  R1811.push(sheet.getRange("E94").getValue());
+  R1811.push(sheet.getRange("F94").getValue());
+
+  R1831.push(sheet.getRange("D95").getValue());
+  R1831.push(sheet.getRange("E95").getValue());
+  R1831.push(sheet.getRange("F95").getValue());
+
+  R1851.push(sheet.getRange("D96").getValue());
+  R1851.push(sheet.getRange("E96").getValue());
+  R1851.push(sheet.getRange("F96").getValue());
+
+  R1871.push(sheet.getRange("D97").getValue());
+  R1871.push(sheet.getRange("E97").getValue());
+  R1871.push(sheet.getRange("F97").getValue());
+
+  R1891.push(sheet.getRange("D98").getValue());
+  R1891.push(sheet.getRange("E98").getValue());
+  R1891.push(sheet.getRange("F98").getValue());
+
+  R1911.push(sheet.getRange("D99").getValue());
+  R1911.push(sheet.getRange("E99").getValue());
+  R1911.push(sheet.getRange("F99").getValue());
+
+  R1931.push(sheet.getRange("D100").getValue());
+  R1931.push(sheet.getRange("E100").getValue());
+  R1931.push(sheet.getRange("F100").getValue());
+
+  R1951.push(sheet.getRange("D101").getValue());
+  R1951.push(sheet.getRange("E101").getValue());
+  R1951.push(sheet.getRange("F101").getValue());
+
+  R1971.push(sheet.getRange("D102").getValue());
+  R1971.push(sheet.getRange("E102").getValue());
+  R1971.push(sheet.getRange("F102").getValue());
+
+  R1991.push(sheet.getRange("D103").getValue());
+  R1991.push(sheet.getRange("E103").getValue());
+  R1991.push(sheet.getRange("F103").getValue());
+
+  R2011.push(sheet.getRange("D104").getValue());
+  R2011.push(sheet.getRange("E104").getValue());
+  R2011.push(sheet.getRange("F104").getValue());
+
+  R2031.push(sheet.getRange("D105").getValue());
+  R2031.push(sheet.getRange("E105").getValue());
+  R2031.push(sheet.getRange("F105").getValue());
+
+  R2051.push(sheet.getRange("D106").getValue());
+  R2051.push(sheet.getRange("E106").getValue());
+  R2051.push(sheet.getRange("F106").getValue());
+
+  R2071.push(sheet.getRange("D107").getValue());
+  R2071.push(sheet.getRange("E107").getValue());
+  R2071.push(sheet.getRange("F107").getValue());
+
+  R2091.push(sheet.getRange("D108").getValue());
+  R2091.push(sheet.getRange("E108").getValue());
+  R2091.push(sheet.getRange("F108").getValue());
+
+  R2111.push(sheet.getRange("D109").getValue());
+  R2111.push(sheet.getRange("E109").getValue());
+  R2111.push(sheet.getRange("F109").getValue());
+
+  R2131.push(sheet.getRange("D110").getValue());
+  R2131.push(sheet.getRange("E110").getValue());
+  R2131.push(sheet.getRange("F110").getValue());
+
+  R2151.push(sheet.getRange("D111").getValue());
+  R2151.push(sheet.getRange("E111").getValue());
+  R2151.push(sheet.getRange("F111").getValue());
+
+  R2171.push(sheet.getRange("D112").getValue());
+  R2171.push(sheet.getRange("E112").getValue());
+  R2171.push(sheet.getRange("F112").getValue());
+
+  R2191.push(sheet.getRange("D113").getValue());
+  R2191.push(sheet.getRange("E113").getValue());
+  R2191.push(sheet.getRange("F113").getValue());
+
+  R2211.push(sheet.getRange("D114").getValue());
+  R2211.push(sheet.getRange("E114").getValue());
+  R2211.push(sheet.getRange("F114").getValue());
+
+  R2231.push(sheet.getRange("D115").getValue());
+  R2231.push(sheet.getRange("E115").getValue());
+  R2231.push(sheet.getRange("F115").getValue());
+
+  R2251.push(sheet.getRange("D116").getValue());
+  R2251.push(sheet.getRange("E116").getValue());
+  R2251.push(sheet.getRange("F116").getValue());
+
+  R2271.push(sheet.getRange("D117").getValue());
+  R2271.push(sheet.getRange("E117").getValue());
+  R2271.push(sheet.getRange("F117").getValue());
+
+  R2291.push(sheet.getRange("D118").getValue());
+  R2291.push(sheet.getRange("E118").getValue());
+  R2291.push(sheet.getRange("F118").getValue());
+
+  R2311.push(sheet.getRange("D119").getValue());
+  R2311.push(sheet.getRange("E119").getValue());
+  R2311.push(sheet.getRange("F119").getValue());
+
+  R2331.push(sheet.getRange("D120").getValue());
+  R2331.push(sheet.getRange("E120").getValue());
+  R2331.push(sheet.getRange("F120").getValue());
+
+  R2351.push(sheet.getRange("D121").getValue());
+  R2351.push(sheet.getRange("E121").getValue());
+  R2351.push(sheet.getRange("F121").getValue());
+
+  R2371.push(sheet.getRange("D122").getValue());
+  R2371.push(sheet.getRange("E122").getValue());
+  R2371.push(sheet.getRange("F122").getValue());
+
+  R2391.push(sheet.getRange("D123").getValue());
+  R2391.push(sheet.getRange("E123").getValue());
+  R2391.push(sheet.getRange("F123").getValue());
+
+  R2411.push(sheet.getRange("D124").getValue());
+  R2411.push(sheet.getRange("E124").getValue());
+  R2411.push(sheet.getRange("F124").getValue());
+
+  R2431.push(sheet.getRange("D125").getValue());
+  R2431.push(sheet.getRange("E125").getValue());
+  R2431.push(sheet.getRange("F125").getValue());
+
+  R2451.push(sheet.getRange("D126").getValue());
+  R2451.push(sheet.getRange("E126").getValue());
+  R2451.push(sheet.getRange("F126").getValue());
+
+  R2471.push(sheet.getRange("D127").getValue());
+  R2471.push(sheet.getRange("E127").getValue());
+  R2471.push(sheet.getRange("F127").getValue());
+
+  const dateCell = sheet.getRange("D2:F2");
+
+  const dateValue = dateCell.getValue();
+
+  if (!dateValue) {
+      SpreadsheetApp.getUi().alert("Please enter a date before submitting!");
+      return;
+  }
+
+  let startRowDates = [3,31,51,71,91,111,131,151,171,191,211,231,251,271,291,311,331,351,371,391,411,431,451,471,491,511,531,551,571,591,611,631,651,671,691,711,731,751,771,791,811,831,851,871,891,911,931,951,971,991,1011,1031,1051,1071,1091,1111,1131,1151,1171,1191,1211,1231,1251,1271,1291,1311,1331,1351,1371,1391,1411,1431,1451,1471,1491,1511,1531,1551,1571,1591,1611,1631,1651,1671,1691,1711,1731,1751,1771,1791,1811,1831,1851,1871,1891,1911,1931,1951,1971,1991,2011,2031,2051,2071,2091,2111,2131,2151,2171,2191,2211,2231,2251,2271,2291,2311,2331,2351,2371,2391,2411,2431,2451,2471];
+
+  let lastRowDates = [29,49,69,89,109,129,149,169,189,209,229,249,269,289,309,329,349,369,389,409,429,449,469,489,509,529,549,569,589,609,629,649,669,689,709,729,749,769,789,809,829,849,869,889,909,929,949,969,989,1009,1029,1049,1069,1089,1109,1129,1149,1169,1189,1209,1229,1249,1269,1289,1309,1329,1349,1369,1389,1409,1429,1449,1469,1489,1509,1529,1549,1569,1589,1609,1629,1649,1669,1689,1709,1729,1749,1769,1789,1809,1829,1849,1869,1889,1909,1929,1949,1969,1989,2009,2029,2049,2069,2089,2109,2129,2149,2169,2189,2209,2229,2249,2269,2289,2309,2329,2349,2369,2389,2409,2429,2449,2469,2474];
+
+  const columnR003Date = 1; // Column A
+  const columnR003Received = 7; // Column G
+  const columnR003Hazera = 8; // Column H
+  const columnR003Mobile = 9; // Column I
+  
+  for(let j = 0; j < 124; j++){
+    // R003 Starts Here
+
+    // R003 DATE Starts Here
+    // Find the next empty cell in column D starting from D4
+    const startRowR003Date = startRowDates[j];
+    const lastRowR003Date = lastRowDates[j];
+
+    let nextRowR003Date = startRowR003Date;
+    for (let i = startRowR003Date; i <= lastRowR003Date + 1; i++) {
+        const cell = sheetPrint.getRange(i, columnR003Date);
+        if (!cell.getValue()) {
+          nextRowR003Date = i;
+          break;
+        }
+    }
+
+    const targetRangeR003Date = sheetPrint.getRange(nextRowR003Date, columnR003Date);
+    const targetValueR003Date = targetRangeR003Date.getValue();
+
+    if (targetValueR003Date) {
+      SpreadsheetApp.getUi().alert(`Cell is not empty. Please check before inserting.`);
+      return;
+    }
+    // Insert the date in the next empty cell in column D
+    sheetPrint.getRange(nextRowR003Date, columnR003Date).setValue(dateValue);
+
+    // R003 DATE Ends Here
+
+    // R003 RECEIVED Starts Here
+    const R003ReceivedCell = sheet.getRange("D"+(j+4));
+
+    const R003ReceivedValue = R003ReceivedCell.getValue();
+    // Find the next empty cell in column G starting from D4
+    const startRowR003Received = startRowDates[j];
+    const lastRowR003Received = lastRowDates[j];
+
+    let nextRowR003Received = startRowR003Received;
+    for (let i = startRowR003Received; i <= lastRowR003Received + 1; i++) {
+        const cell = sheetPrint.getRange(i, columnR003Received);
+        if (!cell.getValue()) {
+          nextRowR003Received = i;
+          break;
+        }
+    }
+
+    const targetRangeR003Received = sheetPrint.getRange(nextRowR003Received, columnR003Received);
+    const targetValueR003Received = targetRangeR003Received.getValue();
+
+    if (targetValueR003Received) {
+      SpreadsheetApp.getUi().alert(`Cell is not empty. Please check before inserting.`);
+      return;
+    }
+    // Insert the R in the next empty cell in column D
+    sheetPrint.getRange(nextRowR003Received, columnR003Received).setValue(R003ReceivedValue);
+
+    // R003 RECEIVED Ends Here
+
+    // R003 HAZERA Starts Here
+    const R003HazeraCell = sheet.getRange("E"+(j+4));
+
+    const R003HazeraValue = R003HazeraCell.getValue();
+    // Find the next empty cell in column G starting from D4
+    const startRowR003Hazera = startRowDates[j];
+    const lastRowR003Hazera = lastRowDates[j];
+
+    let nextRowR003Hazera = startRowR003Hazera;
+    for (let i = startRowR003Hazera; i <= lastRowR003Hazera + 1; i++) {
+        const cell = sheetPrint.getRange(i, columnR003Hazera);
+        if (!cell.getValue()) {
+          nextRowR003Hazera = i;
+          break;
+        }
+    }
+
+    const targetRangeR003Hazera = sheetPrint.getRange(nextRowR003Hazera, columnR003Hazera);
+    const targetValueR003Hazera = targetRangeR003Hazera.getValue();
+
+    if (targetValueR003Hazera) {
+      SpreadsheetApp.getUi().alert(`Cell is not empty. Please check before inserting.`);
+      return;
+    }
+    // Insert the R in the next empty cell in column D
+    sheetPrint.getRange(nextRowR003Hazera, columnR003Hazera).setValue(R003HazeraValue);
+
+    // R003 HAZERA Ends Here
+
+    // R003 MOBILE Starts Here
+    const R003MobileCell = sheet.getRange("F"+(j+4));
+
+    const R003MobileValue = R003MobileCell.getValue();
+    // Find the next empty cell in column G starting from D4
+    const startRowR003Mobile = startRowDates[j];
+    const lastRowR003Mobile = lastRowDates[j];
+
+    let nextRowR003Mobile = startRowR003Mobile;
+    for (let i = startRowR003Mobile; i <= lastRowR003Mobile + 1; i++) {
+        const cell = sheetPrint.getRange(i, columnR003Mobile);
+        if (!cell.getValue()) {
+          nextRowR003Mobile = i;
+          break;
+        }
+    }
+
+    const targetRangeR003Mobile = sheetPrint.getRange(nextRowR003Mobile, columnR003Mobile);
+    const targetValueR003Mobile = targetRangeR003Mobile.getValue();
+
+    if (targetValueR003Mobile) {
+      SpreadsheetApp.getUi().alert(`Cell is not empty. Please check before inserting.`);
+      return;
+    }
+    // Insert the R in the next empty cell in column D
+    sheetPrint.getRange(nextRowR003Mobile, columnR003Mobile).setValue(R003MobileValue);
+
+    // R003 MOBILE Ends Here
+
+    // R003 Ends Here
+  }
+
+  // Optionally clear the input cell
+  dateCell.clearContent();
+
+  SpreadsheetApp.getUi().alert(`Data inserted in cells`);
+
+}
+

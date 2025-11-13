@@ -1,0 +1,53 @@
+function onEdit(e) {
+  // এডিট ইভেন্ট চেক করুন: শুধুমাত্র Sheet1-এর A কলাম এডিট হলে চালান
+  var sheet = e.source.getActiveSheet();
+  if (sheet.getName() !== 'Sheet1' || e.range.getColumn() !== 4 || e.range.getRow() !== 20) {
+    return; // অন্য কোনো পরিবর্তন ইগনোর করুন
+  }
+
+  Logger.log(e.value);
+  
+  var selectedDistrict = e.value; // সিলেক্ট করা জেলা
+  if (!selectedDistrict) return; // যদি খালি হয়, বেরিয়ে যান
+  
+  // ডেটা Sheet থেকে সব ডেটা লোড করুন
+  var dataSheet = e.source.getSheetByName('Sheet4');
+  var dataRange = dataSheet.getDataRange();
+  var data = dataRange.getValues(); // 2D অ্যারে: [[জেলা1, উপজেলা1], [জেলা1, উপজেলা2], ...]
+  
+  // সিলেক্ট করা জেলার উপজেলা ফিল্টার করুন
+  var upazilas = [];
+  for (var i = 0; i < data.length; i++) {
+    if (data[i][0] === selectedDistrict) {
+      upazilas.push(data[i][1]);
+    }
+  }
+  
+  // ইউনিক উপজেলা লিস্ট তৈরি করুন (যদি ডুপ্লিকেট থাকে)
+  var uniqueUpazilas = [...new Set(upazilas)].sort(); // সর্ট করুন
+  
+  // B কলামের সেল খালি করুন (যদি আগের সিলেকশন থাকে)
+  var upazilaCell = sheet.getRange(21, 4); // B কলামের একই রো
+  upazilaCell.clearContent();
+  
+  // উপজেলার জন্য Data Validation সেট করুন
+  var rule = SpreadsheetApp.newDataValidation()
+    .requireValueInList(uniqueUpazilas, true) // true = show dropdown
+    .setAllowInvalid(false) // ইনভ্যালিড ভ্যালু না রাখতে দেয়
+    .build();
+  upazilaCell.setDataValidation(rule);
+  
+  // অপশনাল: ইউজারকে নোটিফাই করুন
+  // SpreadsheetApp.getUi().alert('উপজেলার লিস্ট আপডেট হয়েছে: ' + uniqueUpazilas.length + 'টি উপজেলা পাওয়া গেছে।');
+}
+
+// অপশনাল: ইনিশিয়াল সেটআপ ফাংশন (প্রথমবার চালানোর জন্য)
+function setupInitialUpazila() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1');
+  var upazilaCell = sheet.getRange('B2'); // ডিফল্ট B2
+  var rule = SpreadsheetApp.newDataValidation()
+    .requireValueInList([], true)
+    .setAllowInvalid(false)
+    .build();
+  upazilaCell.setDataValidation(rule); // খালি লিস্ট দিয়ে শুরু করুন
+}
